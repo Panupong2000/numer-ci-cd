@@ -58,7 +58,7 @@ const App = () => {
 	}, [])
 
   return (  
-    <div>
+    <BrowserRouter>
       
     <div>
     <Nav className="justify-content-center" defaultActiveKey="/Bisection" as="ul">
@@ -112,7 +112,6 @@ const App = () => {
 </Nav>
   </div>
     <div>
-    <BrowserRouter>
       <Switch>
 				<Route exact path="/"><Bisection/></Route>
             <Route path="/Bisection" ><Bisection/></Route>
@@ -135,10 +134,9 @@ const App = () => {
             <Route path="/Lagrange" ><Lagrange/></Route>
             <Route path="/Spline" ><Splines/></Route>
       </Switch>
-    </BrowserRouter>
 		  </div>
     
-    </div>
+      </BrowserRouter>
   );
 }
 
