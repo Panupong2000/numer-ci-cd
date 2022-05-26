@@ -7,7 +7,7 @@ function Login() {
 
 	async function loginUser(event) {
 		event.preventDefault()
-        console.log("1")
+        // console.log("1")
 		const response = await fetch('http://localhost:1337/api/login', {
 			method: 'POST',
 			headers: {
@@ -20,7 +20,7 @@ function Login() {
 		})
 
 		const data = await response.json()
-        console.log("data"+data)
+        // console.log("data"+data)
 
 		if (data.user) {
 			localStorage.setItem('token', data.user)
@@ -50,7 +50,7 @@ function Login() {
 			</Col>
 			<br/>
 			<Form.Label column sm="1">
-                Email:
+                Password:
             </Form.Label>
 				<Col md={4}>
 				<Form.Control

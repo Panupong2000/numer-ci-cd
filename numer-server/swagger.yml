@@ -261,7 +261,7 @@ definitions:
       er:
         type: "integer"
         format: "int32"
-      xm:
+      x:
         type: "integer"
         format: "int32"
     xml:

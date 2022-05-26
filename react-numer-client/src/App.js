@@ -46,7 +46,7 @@ const App = () => {
 
 		const data = await req.json()
 
-    console.log(data)
+    // console.log(data)
         
 		if (data.status === 'ok') {
 			setEmail(data.email)
@@ -104,7 +104,7 @@ const App = () => {
       <Button
           type="button"
           onClick={logout} >
-          Calculate
+          Logout
       </Button>
       </div>
       )}

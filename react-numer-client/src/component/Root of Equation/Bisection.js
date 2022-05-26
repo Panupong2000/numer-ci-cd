@@ -3,14 +3,9 @@ import { addStyles, EditableMathField,StaticMathField } from "react-mathquill";
 import {Form,Button,Row,Col,Table,Accordion,Container} from 'react-bootstrap'
 import {evaluate} from 'mathjs';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis,ResponsiveContainer,Tooltip } from 'recharts';
-// import EquationEditor from "equation-editor-next";
-
-// const config = {}
-// const math = create(all, config)
 
 addStyles()
 
-// const axios = require('axios').default
 
 const Bisection = () => {
 
@@ -23,7 +18,6 @@ const Bisection = () => {
 
     const [result, setresult] = useState(null)    
     const [latex, setLatex] = useState("");
-    // const [check,setcheck] = useState(null)
     const [xmx, setxmx] = useState(null)  
     const [ans, setans] = useState(null)  
     const [equation, setEquation] = useState();
@@ -99,19 +93,19 @@ const Bisection = () => {
 
         //prove
         let fx1 = cal(xm)   
-        console.log(BiData[0].eq)
+        // console.log(BiData[0].eq)
         setans(fx1)
         setxmx(xm)
         setresult(results)
         setEquation(eq)
         
         fetch('http://localhost:1337/api', {
-			headers: {
+			headers: {  
 				'x-access-token': localStorage.getItem('token'),
 			},
 		}).then((res) => res.json())
             .then((json) => {
-                console.log(json)
+                // console.log(json)
                 if(json.status ==='ok'){
                     fetch('http://localhost:1337/api/root/Bisection', {
                         method: 'POST',
