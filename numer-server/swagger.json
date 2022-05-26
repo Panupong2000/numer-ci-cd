@@ -1,0 +1,120 @@
+{
+  "swagger": "2.0",
+  "title": "numer-project",
+  "version": "1.0.0",
+  "description": "Project numer",
+  "host": "localhost:1337",
+  "basePath": "",
+  "tags": [
+    {
+        "name": "User"
+      },{
+          "name": "Roots Of Equations"
+      }
+  ],
+  "schemes": ["http"], 
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+      "/api":{
+        "get": {
+            "tags": ["User"],
+            "description": "Check login jwt",
+            "consumes": ["application/json"],
+            "produces": ["application/json"],
+            "responses": {
+                "200": {
+                    "description": "successful operation"
+                }
+            }
+        }
+      },
+      "/api/register":{
+        "post": {
+            "tags": ["User"],
+            "description": "Register api",
+            "consumes": ["application/json"],
+            "produces": ["application/json"],
+            "responses": {
+                "200": {
+                    "description": "Register successful"
+                }
+            }
+        }
+      },
+      "/api/login":{
+        "post": {
+            "tags": ["User"],
+            "description": "login api",
+            "consumes": ["application/json"],
+            "produces": ["application/json"],
+            "responses": {
+                "200": {
+                    "description": "login successful"
+                }
+            }
+        }
+      },
+      "/api/root/bisection": {
+          "post": {
+              "tags": ["Roots Of Equations"],
+              "description": "Bisection api",
+              "consumes": ["application/json"],
+              "produces": ["application/json"],
+              "responses": {
+                  "200": {
+                      "description": "successful operation"
+                  }
+              }
+          }
+      },"/api/root/falseposition": {
+          "post": {
+              "tags": ["Roots Of Equations"],
+              "description": "False-Position api",
+              "consumes": ["application/json"],
+              "produces": ["application/json"],
+              "responses": {
+                  "200": {
+                      "description": "successful operation"
+                  }
+              }
+          }
+      },"/api/root/onepoint": {
+          "post": {
+              "tags": ["Roots Of Equations"],
+              "description": "Onepoint api",
+              "consumes": ["application/json"],
+              "produces": ["application/json"],
+              "responses": {
+                  "200": {
+                      "description": "successful operation"
+                  }
+              }
+          }
+      },"/api/root/newtonraphon": {
+          "post": {
+              "tags": ["Roots Of Equations"],
+              "description": "Newton-Raphson api",
+              "consumes": ["application/json"],
+              "produces": ["application/json"],
+              "responses": {
+                  "200": {
+                      "description": "successful operation"
+                  }
+              }
+          }
+      },"/api/root/secant": {
+          "post": {
+              "tags": ["Roots Of Equations"],
+              "description": "Secant api",
+              "consumes": ["application/json"],
+              "produces": ["application/json"],
+              "responses": {
+                  "200": {
+                      "description": "successful operation"
+                  }
+              }
+          }
+      }
+  }
+}
